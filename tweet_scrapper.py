@@ -5,10 +5,12 @@ from pathlib import Path
 from datetime import datetime
 from twikit import Client, TooManyRequests
 from random import randint, uniform
+from dotenv import load_dotenv
 
-USERNAME = "NdukachiB69031"
-EMAIL = "ngmaxwell77@gmail.com"
-PASSWORD = "eXtremely-useful-comms7"
+load_dotenv()
+EMAIL = os.environ['email']
+PASSWORD = os.environ['password']
+USERNAME = os.environ['username']
 
 # Initialize client
 client = Client("en-US")
